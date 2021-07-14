@@ -1,6 +1,9 @@
 # ReactJS ASPNetCore DDD Example
 This is ReactJS and ASP.Net Core 5 Web Api Domain Driven Design Crud example project. This is small application about books attached to their publishers. It demonstrates basic Crud in ReactJS and ASP.Net Core.
 
+## Features
+Search and Pagination.
+
 ## Getting Started
 1. Go to ASPNetCoreAPI and open ASPNetCoreAPI.sln in Visual Studio.
 2. In appsettings.json change DefaultConnection string.
