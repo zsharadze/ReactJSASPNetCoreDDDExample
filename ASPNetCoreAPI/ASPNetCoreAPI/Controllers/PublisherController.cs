@@ -20,7 +20,7 @@ namespace ASPNetCoreAPI.Controllers
             _publisherService = publisherService;
         }
 
-        // GET: Publishers
+        // GET: Publisher/GetAll
         [HttpGet]
         public async Task<List<Publisher>> GetAll()
         {
@@ -29,28 +29,28 @@ namespace ASPNetCoreAPI.Controllers
         }
 
 
-        // GET: Publisher/Details/5
+        // GET: Publisher/Details/?id=5
         [HttpGet]
         public async Task<Publisher> Details(int id)
         {
             return await _publisherService.GetById(id);
         }
 
-        // GET: Publisher/Create
+        // POST: Publisher/Create
         [HttpPost]
         public async Task<int> Create(Publisher publisher)
         {
             return await _publisherService.Add(publisher);
         }
 
-        // GET: Publisher/Edit/5
+        // POST: Publisher/Edit/?id=5
         [HttpPost]
         public async Task<Publisher> Edit(Publisher publisher)
         {
             return await _publisherService.Update(publisher);
         }
 
-        // GET: Publisher/Delete/5
+        // POST: Publisher/Delete/?id=5
         [HttpPost]
         public async Task<bool> Delete(int id)
         {

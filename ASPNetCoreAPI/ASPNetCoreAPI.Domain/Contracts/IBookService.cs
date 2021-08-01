@@ -10,7 +10,7 @@ namespace ASPNetCoreAPI.Domain.Contracts
     {
         Task<BooksViewModel> GetAllItems(int? publisherId, string searchText, int? pageSize, int? pageIndex);
         Task<int> Add(Book newItem);
-        Task<Book> Update(Book newItem);
+        Task<Book> Update(Book item);
         Task<Book> GetById(int id);
         Task<bool> Remove(int id);
     }

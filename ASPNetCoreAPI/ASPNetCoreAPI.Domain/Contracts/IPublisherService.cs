@@ -10,7 +10,7 @@ namespace ASPNetCoreAPI.Domain.Contracts
     {
         Task<IEnumerable<Publisher>> GetAllItems();
         Task<int> Add(Publisher newItem);
-        Task<Publisher> Update(Publisher newItem);
+        Task<Publisher> Update(Publisher item);
         Task<Publisher> GetById(int id);
         Task<bool> Remove(int id);
     }

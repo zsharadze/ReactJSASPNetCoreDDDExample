@@ -37,9 +37,9 @@ namespace ASPNetCoreAPI.Domain.Services
             return _publisherRepository.Remove(id);
         }
 
-        public Task<Publisher> Update(Publisher newItem)
+        public Task<Publisher> Update(Publisher item)
         {
-            return _publisherRepository.Update(newItem);
+            return _publisherRepository.Update(item);
         }
     }
 }

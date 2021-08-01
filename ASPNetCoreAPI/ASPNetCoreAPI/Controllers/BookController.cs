@@ -21,7 +21,7 @@ namespace ASPNetCoreAPI.Controllers
             _bookService = bookService;
         }
 
-        // GET: Books
+        // GET: Book/GetAll
         [HttpGet]
         public async Task<BooksViewModel> GetAll(int? publisherId, string searchText = null, int? pageSize = 20, int? pageIndex = 1)
         {
@@ -44,28 +44,28 @@ namespace ASPNetCoreAPI.Controllers
             return booksViewModel;
         }
 
-        // GET: Book/Details/5
+        // GET: Book/Details/?id=5
         [HttpGet]
         public async Task<Book> Details(int id)
         {
             return await _bookService.GetById(id);
         }
 
-        // GET: Book/Create
+        // POST: Book/Create
         [HttpPost]
         public async Task<int> Create(Book book)
         {
             return await _bookService.Add(book);
         }
 
-        // GET: Book/Edit/5
+        // POST: Book/Edit/?id=5
         [HttpPost]
         public async Task<Book> Edit(Book book)
         {
             return await _bookService.Update(book);
         }
 
-        // GET: Book/Delete/5
+        // POST: Book/Delete/?id=5
         [HttpPost]
         public async Task<bool> Delete(int id)
         {
