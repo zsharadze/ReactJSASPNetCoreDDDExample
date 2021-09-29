@@ -125,7 +125,7 @@ export class AddBook extends Component {
                                 <label>Publisher:&nbsp;</label>
                             </td>
                             <td className="td2AddBook">
-                                <select className="form-control" value={this.state.bookPublisherId}
+                                <select className="form-select" value={this.state.bookPublisherId}
                                     onChange={(event) => { this.setState({ bookPublisherId: event.target.value }) }}>
                                     {this.props.publishers && this.props.publishers.map((option) => (
                                         <option key={option.id} value={option.id}>
