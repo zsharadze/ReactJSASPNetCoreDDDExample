@@ -1,6 +1,8 @@
 export const DataTypes = {
     BOOKS: "books",
+    BOOK: "book",
     PUBLISHERS: "publishers",
+    PUBLISHER: "publisher",
 }
 
 export const ACTION_TYPES = {

@@ -56,7 +56,7 @@ export class BookList extends Component {
                         <tbody>
                             <tr>
                                 <td className="float-start">
-                                    <select className="form-control" value={this.props.selectedPublisherValue}
+                                    <select className="form-select" value={this.props.selectedPublisherValue}
                                         onChange={this.handleChangePublisher}>
                                         <option key={0} value="">
                                             Select publisher...

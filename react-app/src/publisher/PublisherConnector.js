@@ -38,7 +38,7 @@ export const PublisherConnector = connect(mapStateToProps, mapDispatchToProps)(
                 Name: publisherName
             }
 
-            this.props.addPublisher(DataTypes.PUBLISHERS, publisherObject, this.afterPublisherAdd);
+            this.props.addPublisher(DataTypes.PUBLISHER, publisherObject, this.afterPublisherAdd);
         }
 
         afterPublisherAdd = () => {
@@ -56,7 +56,7 @@ export const PublisherConnector = connect(mapStateToProps, mapDispatchToProps)(
         }
 
         getPublisherById = (publisherId, callback) => {
-            this.props.getPublisher(DataTypes.PUBLISHERS, publisherId, callback);
+            this.props.getPublisher(DataTypes.PUBLISHER, publisherId, callback);
         }
 
         handleUpdatePublisher = (publisherId, publisherName) => {
@@ -64,11 +64,11 @@ export const PublisherConnector = connect(mapStateToProps, mapDispatchToProps)(
                 Id: publisherId,
                 Name: publisherName
             }
-            this.props.updatePublisher(DataTypes.PUBLISHERS, publisherObject, this.afterPublisherUpdate);
+            this.props.updatePublisher(DataTypes.PUBLISHER, publisherObject, this.afterPublisherUpdate);
         }
 
         handleDeletePublisher = (publisherId) => {
-            this.props.deletePublisher(DataTypes.PUBLISHERS, publisherId, this.afterPublisherDelete);
+            this.props.deletePublisher(DataTypes.PUBLISHER, publisherId, this.afterPublisherDelete);
         }
     }
 )

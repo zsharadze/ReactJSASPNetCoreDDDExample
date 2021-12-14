@@ -62,7 +62,7 @@ export const BookConnector = connect(mapStateToProps, mapDispatchToProps)(
         }
 
         handleAddBook = (newBook) => {
-            this.props.addBook(DataTypes.BOOKS, newBook, this.afterAddOrUpdateBook);
+            this.props.addBook(DataTypes.BOOK, newBook, this.afterAddOrUpdateBook);
         }
 
         handleCancelAddBook = () => {
@@ -70,11 +70,11 @@ export const BookConnector = connect(mapStateToProps, mapDispatchToProps)(
         }
 
         handleUpdateBook = (newBook) => {
-            this.props.updateBook(DataTypes.BOOKS, newBook, this.afterAddOrUpdateBook);
+            this.props.updateBook(DataTypes.BOOK, newBook, this.afterAddOrUpdateBook);
         }
 
         handleDeleteBook = (bookId) => {
-            this.props.deleteBook(DataTypes.BOOKS, bookId, this.afterDeleteBook);
+            this.props.deleteBook(DataTypes.BOOK, bookId, this.afterDeleteBook);
         }
 
         afterAddOrUpdateBook = () => {
@@ -93,7 +93,7 @@ export const BookConnector = connect(mapStateToProps, mapDispatchToProps)(
         }
 
         getBookById = (bookId, callback) => {
-            this.props.getBook(DataTypes.BOOKS, bookId, callback);
+            this.props.getBook(DataTypes.BOOK, bookId, callback);
         }
     }
 )

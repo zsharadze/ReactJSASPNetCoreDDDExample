@@ -16,7 +16,7 @@ export const getPublishers = (dataType) => (
 export const getPublisher = (dataType, publisherId, callback) => (
     {
         type: ACTION_TYPES.PUBLISHERS_GET,
-        payload: publisher().getById(publisherId, callback)
+        payload: publisher().getById(publisherId)
             .then((response) => {
                 callback(response.data);
                 return ({
@@ -29,7 +29,7 @@ export const getPublisher = (dataType, publisherId, callback) => (
 export const addPublisher = (dataType, publisherObject, callback) => (
     {
         type: ACTION_TYPES.PUBLISHER_CREATE,
-        payload: publisher().create(publisherObject, callback)
+        payload: publisher().create(publisherObject)
             .then((response) => {
                 callback();
                 return ({
@@ -42,7 +42,7 @@ export const addPublisher = (dataType, publisherObject, callback) => (
 export const updatePublisher = (dataType, publisherObject, callback) => (
     {
         type: ACTION_TYPES.PUBLISHER_UPDATE,
-        payload: publisher().update(publisherObject, callback)
+        payload: publisher().update(publisherObject)
             .then((response) => {
                 callback();
                 return ({
@@ -55,7 +55,7 @@ export const updatePublisher = (dataType, publisherObject, callback) => (
 export const deletePublisher = (dataType, publisherId, callback) => (
     {
         type: ACTION_TYPES.PUBLISHER_DELETE,
-        payload: publisher().delete(publisherId, callback)
+        payload: publisher().delete(publisherId)
             .then((response) => {
                 callback();
                 return ({
@@ -117,7 +117,7 @@ export const updateBook = (dataType, bookObject, callback) => (
     export const deleteBook = (dataType, bookId, callback) => (
         {
             type: ACTION_TYPES.BOOK_DELETE,
-            payload: book().delete(bookId, callback)
+            payload: book().delete(bookId)
                 .then((response) => {
                     callback();
                     return ({
